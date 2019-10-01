@@ -1,0 +1,8 @@
+.sac-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sac-container > * {
+    width: 100%;
+  }

@@ -1,0 +1,33 @@
+<div class="container-fluid content">
+  <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="#">POC-ASD</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a routerLink="/" *ngIf="!auth.loggedIn" >Home</a></li>
+            <li><a routerLink="home" routerLinkActive="active" *ngIf="auth.loggedIn">Home</a></li>
+            <li><a routerLink="logistica-entrega" routerLinkActive="active" *ngIf="auth.loggedIn">Logística</a></li>
+            <li><a routerLink="controle-frete" routerLinkActive="active" *ngIf="auth.loggedIn">Controle de Frete</a></li>
+            <li><a routerLink="controle-ocorrencia" routerLinkActive="active" *ngIf="auth.loggedIn" >Controle de Ocorrências</a></li>
+            <li><a routerLink="sac-admin" routerLinkActive="active" *ngIf="auth.loggedIn">SAC-Admin</a></li>
+            <li><a routerLink="sac"    *ngIf="!auth.loggedIn">SAC</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a  class="glyphicon glyphicon-log-in" routerLink="login" routerLinkActive="active" *ngIf="!auth.loggedIn">Login</a></li>
+            <li><a  class="glyphicon glyphicon-log-out" (click)="logout()" href="#" *ngIf="auth.loggedIn">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <router-outlet></router-outlet>
+
+  <ngx-spinner></ngx-spinner>
+</div>
+

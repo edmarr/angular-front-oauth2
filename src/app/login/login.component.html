@@ -1,0 +1,10 @@
+    <div class="container">
+      <div class="card card-container">
+            <form class="form-signin" (ngSubmit)="submit()" >
+                <span id="reauth-email" class="reauth-email"></span>
+                <input type="text" [(ngModel)]="username" name="username" class="form-control" placeholder="Usuário" required autofocus>
+                <input type="password" [(ngModel)]="password" name="password" class="form-control" placeholder="Senha" required>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Entrar</button>
+            </form><!-- /form -->
+        </div><!-- /card-container -->
+    </div><!-- /container -->
